@@ -57,12 +57,15 @@ def createTree(dataSet, minSup=1):
 	return retTree, headerTable
 
 def loadSimpDat():
-	simpDat = [['r', 'z', 'h', 'j', 'p'],
-			   ['z', 'y', 'x', 'w', 'v', 'u', 't', 's'],
-			   ['z'],
-			   ['r', 'x', 'n', 'o', 's'],
-			   ['y', 'r', 'x', 'z', 'q', 't', 'p'],
-			   ['y', 'z', 'x', 'e', 'q', 's', 't', 'm']]
+	# simpDat = [['r', 'z', 'h', 'j', 'p'],
+	# 		   ['z', 'y', 'x', 'w', 'v', 'u', 't', 's'],
+	# 		   ['z'],
+	# 		   ['r', 'x', 'n', 'o', 's'],
+	# 		   ['y', 'r', 'x', 'z', 'q', 't', 'p'],
+	# 		   ['y', 'z', 'x', 'e', 'q', 's', 't', 'm']]
+	simpDat = [['l1', 'l2', 'l5'], ['l2', 'l4'], ['l2', 'l3'],['l2'],['l1','l2','l3','l4','l5','l6','l7'],
+        ['l1', 'l2', 'l4'], ['l1', 'l3'], ['l2', 'l3'],
+        ['l1', 'l3'], ['l1', 'l2', 'l3','l4', 'l5'], ['l1', 'l2', 'l3','l4']]
 	return simpDat
 
 def updateTree(items, inTree, headerTable, count):
@@ -89,10 +92,14 @@ def updateHeader(nodeToTest, targetNode):
 
 """ 将初始数据由列表转换为字典 """
 def createInitSet(dataSet):
-	retDict = {}
-	for trans in dataSet:
-		retDict[frozenset(trans)] = 1
-	return retDict
+	frozenDataSet = {}
+	for elem in dataSet:
+		if(frozenset(elem) in frozenDataSet):
+			frozenDataSet[frozenset(elem)] +=1
+		else:
+			frozenDataSet[frozenset(elem)] = 1
+
+	return frozenDataSet
 
 """寻找条件模式基"""
 def findPrefixPath(basePat, treeNode):
@@ -180,12 +187,13 @@ initSet = createInitSet(dataSet)
 
 myFPtree, myHeaderTab = createTree(initSet, 3)
 # # myFPtree.disp()
+# print(myHeaderTab)
 freqItems = []
 mineTree(myFPtree, myHeaderTab, 3, set([]), freqItems)
 print(freqItems)
-rules = []
-rulesGenerator(freqItems,0.7,rules)
-print(rules)
+# rules = []
+# rulesGenerator(freqItems,0.7,rules)
+# print(rules)
 # if __name__=="__main__":
 	
 	# print(dataSet)

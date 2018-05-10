@@ -122,6 +122,7 @@ class MY_GUI():
 			print(i)
 			self.result_data_Text.insert(INSERT,i)
 			self.result_data_Text.insert(INSERT,'\n')
+		self.result_data_Text.insert(INSERT,len(self.L))
 		self.log_data_Text.insert(INSERT,'频繁项集已生成！\n')
 
 	
@@ -145,6 +146,7 @@ class MY_GUI():
 			print(i)
 			self.result_data_Text.insert(INSERT,i)
 			self.result_data_Text.insert(INSERT,'\n')
+		self.result_data_Text.insert(INSERT,len(self.rules))
 		self.log_data_Text.insert(INSERT,'关联规则生成完毕...\n')
 
 

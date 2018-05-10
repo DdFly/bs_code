@@ -1,12 +1,12 @@
 #coding=utf-8  
 #python3.5   
-  
+import loaddata
 
-def loadDataSet():
-    data_set=[['l1', 'l2', 'l5'], ['l2', 'l4'], ['l2', 'l3'],['l2'],['l1','l2','l3','l4','l5','l6','l7'],
-        ['l1', 'l2', 'l4'], ['l1', 'l3'], ['l2', 'l3'],
-        ['l1', 'l3'], ['l1', 'l2', 'l3','l4', 'l5'], ['l1', 'l2', 'l3','l4']]
-    return data_set
+# def loadDataSet():
+#     data_set=[['l1', 'l2', 'l5'], ['l2', 'l4'], ['l2', 'l3'],['l1','l2','l3','l4','l5','l6','l7'],
+#         ['l1', 'l2', 'l4'], ['l1', 'l3'], ['l2', 'l3'],
+#         ['l1', 'l3'], ['l1', 'l2', 'l3','l4', 'l5'], ['l1', 'l2', 'l3','l4']]
+#     return data_set
 
 def createC1( dataSet ):  #生成频繁1项集
     ''''' 
@@ -134,25 +134,38 @@ def rulesFromConseq( freqSet, H, supportData, brl, minConf=0.7 ):
                                                                     #而calcConf函数的关联结果的右侧就是频繁子项集）的关联结果  
             rulesFromConseq( freqSet, Hmp1, supportData, brl, minConf )   
 
-def generateRules( L, supportData, minConf=0.7 ):  
+def generateRules( L, support_data, min_conf=0.7 ):  
     ''''' 
         根据频繁项集和最小可信度生成规则。 
         L(list):存储频繁项集 
         supportData(dict):存储着所有项集（不仅仅是频繁项集）的支持度 
         minConf(float):最小可信度 
     '''  
-    bigRuleList = []  
-    for i in range( 1, len( L ) ):  
-        for freqSet in L[ i ]:         
-            # print(list(freqSet))                                           # 对于每一个频繁项集的集合freqSet  
-            H1 = [ frozenset( [ item ] ) for item in freqSet ] 
-            # print(list(H1))
-            if i > 1:                                                               # 如果频繁项集中的元素个数大于2，需要进一步合并，这样做的结果就是会有“[1|多]->多”(右边只会是“多”，  
-                                                                                    #因为合并的本质是频繁子项集变大，而calcConf函数的关联结果的右侧就是频繁子项集），的关联结果  
-                rulesFromConseq( freqSet, H1, supportData, bigRuleList, minConf )  
-            else:  
-                calcConf( freqSet, H1, supportData, bigRuleList, minConf )  
-    return bigRuleList
+    # bigRuleList = []  
+    # for i in range( 1, len( L ) ):  
+    #     for freqSet in L[ i ]:         
+    #         # print(list(freqSet))                                           # 对于每一个频繁项集的集合freqSet  
+    #         H1 = [ frozenset( [ item ] ) for item in freqSet ] 
+    #         # print(list(H1))
+    #         if i > 1:                                                               # 如果频繁项集中的元素个数大于2，需要进一步合并，这样做的结果就是会有“[1|多]->多”(右边只会是“多”，  
+    #                                                                                 #因为合并的本质是频繁子项集变大，而calcConf函数的关联结果的右侧就是频繁子项集），的关联结果  
+    #             rulesFromConseq( freqSet, H1, supportData, bigRuleList, minConf )  
+    #         else:  
+    #             calcConf( freqSet, H1, supportData, bigRuleList, minConf )  
+    # return bigRuleList
+    big_rule_list = []
+    sub_set_list = []
+    for i in range(0, len(L)):
+        for freq_set in L[i]:
+            for sub_set in sub_set_list:
+                if sub_set.issubset(freq_set):
+                    conf = support_data[freq_set] / support_data[freq_set - sub_set]
+                    big_rule = (freq_set - sub_set, sub_set, conf)
+                    if conf >= min_conf and big_rule not in big_rule_list:
+                        # print freq_set-sub_set, " => ", sub_set, "conf: ", conf
+                        big_rule_list.append(big_rule)
+            sub_set_list.append(freq_set)
+    return big_rule_list
 def mainfunc(myDat,minSupport=0.3,minConf=0.3):
     L,suppData = apriori( myDat, minSupport)
     # print(suppData)
@@ -165,17 +178,21 @@ def mainfunc(myDat,minSupport=0.3,minConf=0.3):
 # loadDataSet()
 # mainfunc(loadDataSet())
 if __name__ == '__main__':  
-    myDat = loadDataSet()  
-    # print(myDat)                                 # 导入数据集  
-    L,suppData = apriori( myDat, 0.3)                     # 选择频繁项集  
+    myDat = loaddata.load_data(0)
+    # print(len(myDat))                                 # 导入数据集  
+    # L,suppData = apriori( myDat, 0.3)                     # 选择频繁项集  
     # print(u'频繁项集L：',L) 
     # print("啦啦啦")
     # for i in L:
-    #     print(i)
-    print(L)
+    #     for x in i:
+    #         print(x,suppData[x])
+    # print(L)
     # for var in L:
     #     print(suppData[var])
     # print(suppData) 
     # print(u"所有候选项集的支持度信息：", suppData)  
-    rules = generateRules( L, suppData, minConf=0.3)  
+    # rules = generateRules( L, suppData, 0.7) 
+    # for x in rules:
+    #      print(x) 
+    # print(len(rules))
     # print('rules:\n', rules)

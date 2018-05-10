@@ -1,7 +1,6 @@
 #coding=utf-8  
 
-import loaddata
-# import fpgrouth
+# import loaddata
 
 
 def loadDataSet():
@@ -21,13 +20,9 @@ def transfer2FrozenDataSet(dataSet):
     参数：dataSet
     返回：frozenDataSet
     """
-    # frozenDataSet = {}
-    # for elem in dataSet:
-    #     frozenDataSet[frozenset(elem)] = 1
-    # return frozenDataSet
-    frozenDataSet = {}
     global n
     n=0
+    frozenDataSet = {}
     for elem in dataSet:
         if(frozenset(elem) in frozenDataSet):
             frozenDataSet[frozenset(elem)] +=1
@@ -70,6 +65,9 @@ def createFPTree(frozenDataSet, minSupport):
         for item in items:
             headPointTable[item] = headPointTable.get(item, 0) + frozenDataSet[items]
 
+    # headPointTable = {}
+    # for k,v in headPointTable.items:
+    #     if(v/)
     # 删除不满足最小支持度的节点
     headPointTable = {k:v for k,v in headPointTable.items() if v/n >= minSupport}
     frequentItems = set(headPointTable.keys())
@@ -192,25 +190,23 @@ def getRules(frequentset,currentset, rules, frequentPatterns, minConf):
             if(len(subSet) >= 2):
                 getRules(frequentset, subSet, rules, frequentPatterns, minConf)
 
-# if __name__=='__main__':
-#     # print("fptree:")
-#     dataSet = loadDataSet()
-#     frozenDataSet = transfer2FrozenDataSet(dataSet)
-#     print(frozenDataSet)
-#     minSupport = 0.3
-#     fptree, headPointTable = createFPTree(frozenDataSet, minSupport)
-#     # fptree,headPointTable = fpgrouth.createTree(frozenDataSet,minSupport)
-#     # fptree.disp()
-#     frequentPatterns = {}
-#     prefix = set([])
-#     mineFPTree(headPointTable, prefix, frequentPatterns, minSupport)
-#     print("频繁项集\n")
-#     for x in frequentPatterns:
-#         print(x,frequentPatterns[x])
-#     minConf = 0.7
-#     rules = []
-#     rulesGenerator(frequentPatterns, minConf, rules)
-#     print("关联规则\n")
-#     for x in rules:
-#         print(x)
-#     print(len(rules))
+if __name__=='__main__':
+    # print("fptree:")
+    dataSet = loadDataSet()
+    frozenDataSet = transfer2FrozenDataSet(dataSet)
+    minSupport = 0.3
+    fptree, headPointTable = createFPTree(frozenDataSet, minSupport)
+    # fptree.disp()
+    frequentPatterns = {}
+    prefix = set([])
+    mineFPTree(headPointTable, prefix, frequentPatterns, minSupport)
+    print("频繁项集\n")
+    for x in frequentPatterns:
+        print(x,frequentPatterns[x])
+    minConf = 0.7
+    rules = []
+    rulesGenerator(frequentPatterns, minConf, rules)
+    print("关联规则\n")
+    for x in rules:
+        print(x)
+    print(len(rules))
