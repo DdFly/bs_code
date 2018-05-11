@@ -1,8 +1,8 @@
 # !/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-import apriori4
-import fpgrowthDiy
+import apriori
+import fpgrowth
 import loaddata
 import threading
 from tkinter import *
@@ -16,8 +16,11 @@ from tkinter import filedialog as tkFiledialog
 class MY_GUI():
 
 	def __init__(self,window):
-		self.window=window 
+		self.window=window
+		self.minsupport=0
+		self.minconfig=0 
 
+	
 	#设置窗口
 	def set_init_window(self):
 		self.window.title("第一个GUI界面")      #窗口名
@@ -27,18 +30,24 @@ class MY_GUI():
 		self.init_data_label.grid(row=0, column=0)
 		self.result_data_label = Label(self.window, text="输出结果")
 		self.result_data_label.grid(row=0, column=12)
-		self.clean_data_label = Label(self.window,text="清空",width=8)
-		self.clean_data_label.grid(row=0,column=18)
 		self.log_label = Label(self.window, text="日志")
 		self.log_label.grid(row=12, column=0)
 		#文本框
-		self.init_data_Text = scrolledtext.ScrolledText(self.window, width=67, height=35)  #原始数据录入框
+		# self.lfc_field_1_t_sv = Scrollbar(self.window, orient=VERTICAL)  #文本框-竖向滚动条  
+		# self.lfc_field_1_t_sh = Scrollbar(self.window, orient=HORIZONTAL)  #文本框-横向滚动条
+		# self.init_data_Text = Text(self.window,width=67,height=35,wrap=None,yscrollcommand=self.lfc_field_1_t_sv.set, xscrollcommand=self.lfc_field_1_t_sh.set)
+		# self.lfc_field_1_t_sv.config(command=self.init_data_Text.yview)  
+		# self.lfc_field_1_t_sh.config(command=self.init_data_Text.xview)
+		self.init_data_Text = scrolledtext.ScrolledText(self.window, width=67, height=35,wrap=WORD)  #原始数据录入框
 		self.init_data_Text.grid(row=1, column=0, rowspan=10, columnspan=10)
-		self.result_data_Text = scrolledtext.ScrolledText(self.window, width=70, height=49)  #处理结果展示
+		self.result_data_Text = scrolledtext.ScrolledText(self.window, width=70, height=49,wrap=WORD)  #处理结果展示
 		self.result_data_Text.grid(row=1, column=12, rowspan=15, columnspan=10)
-		self.log_data_Text = scrolledtext.ScrolledText(self.window, width=66, height=9)  # 日志框
+		self.log_data_Text = scrolledtext.ScrolledText(self.window, width=66, height=9,wrap=WORD)  # 日志框
 		self.log_data_Text.grid(row=13, column=0, columnspan=10)
 		#按钮
+
+		Button(self.window,text="清空",command=self.clear_result ,width=8).grid(row=0,column=18)
+
 		Button(self.window, text="加载数据集",command=self.click1,  bg="lightblue", width=10).grid(row=1,column=11)  # 调用内部方法  加()为直接调用
 		# self.str_trans_to_md5_button.grid(row=1, column=11)
 		Button(self.window, text="选择算法",command=lambda:self.click2(), bg="lightblue", width=10).grid(row=2,column=11)  # 调用内部方法  加()为直接调用
@@ -49,19 +58,27 @@ class MY_GUI():
 		# self.str_trans_to_md5_button
 		Button(self.window,text="生成规则",command=lambda:self.click5(),bg="lightblue",width=10).grid(row=5,column=11)
 
-	def click1(self):
-		fn = tkFiledialog.askopenfilename()    #选择文件夹
-		# fnlist = os.walk( fn )                  #列出目录
-		# print(fn)
-		self.log_data_Text.insert(INSERT,'正在加载数据...\n')
+	def clear_result(self):
+		self.result_data_Text.delete(0.0,END)
+
+
+	def loaddata_thread(self,fn):
 		self.dataset = loaddata.load_data(fn)
-		# print(self.dataset)
 		for i in self.dataset:
 			self.init_data_Text.insert(INSERT,i)
 			self.init_data_Text.insert(INSERT,'\n')
+		self.log_data_Text.insert(INSERT,'加载完毕！共'+str(len(self.dataset))+'项\n')
+	def click1(self):
+		fn = tkFiledialog.askopenfilename()    #选择文件夹
+		if (fn!=''):
+			self.log_data_Text.insert(INSERT,'正在加载数据...\n')
+			t=threading.Thread(target=self.loaddata_thread,args=(fn,))
+			t.setDaemon(True)
+			t.start()
+		
+		
 
-		self.log_data_Text.insert(INSERT,'加载完毕！\n')
-
+		
 	def click2(self):
 		self.top = Toplevel()
 		self.top.title('选择算法')
@@ -98,32 +115,41 @@ class MY_GUI():
 		self.top.destroy()
 
 	def aprithread(self):
+		self.result_data_Text.insert(INSERT,'频繁项集:\n')	
 		if (self.suanfa=='Aprioi'):
 			if(self.minsupport!=0):
-				self.L,self.support=apriori4.apriori(self.dataset,self.minsupport)
+				self.L,self.support=apriori.apriori(self.dataset,self.minsupport)
 			else:
-				self.L,self.support=apriori4.apriori(self.dataset)
+				self.L,self.support=apriori.apriori(self.dataset)
+			for x in self.L:
+				for i in x:
+					self.result_data_Text.insert(INSERT,i)
+					self.result_data_Text.insert(INSERT,'\n')
+
 		else:
-			self.frozenDataSet = fpgrowthDiy.transfer2FrozenDataSet(self.dataset)
-			self.fptree,self.headPointTable = fpgrowthDiy.createFPTree(self.frozenDataSet, self.minsupport)
-			# fptree.disp()
+			self.frozenDataSet = fpgrowth.transfer2FrozenDataSet(self.dataset)
 			self.L = {}
 			self.prefix = set([])
-			fpgrowthDiy.mineFPTree(self.headPointTable, self.prefix, self.L, self.minsupport)
-			# print(L)
+			if(self.minconfig!=0):
+				self.fptree,self.headPointTable = fpgrowth.createFPTree(self.frozenDataSet, self.minsupport)				
+				fpgrowth.mineFPTree(self.headPointTable, self.prefix, self.L, self.minsupport)
+			else:
+				self.fptree,self.headPointTable = fpgrowth.createFPTree(self.frozenDataSet)
+				fpgrowth.mineFPTree(self.headPointTable, self.prefix,self.L)
+			for i in self.L:
+				# print(i)
+				self.result_data_Text.insert(INSERT,i)
+				self.result_data_Text.insert(INSERT,'\n')
+			self.result_data_Text.insert(INSERT,len(self.L))	
+		
+		self.log_data_Text.insert(INSERT,'频繁项集已生成！\n')
+
 
 	def click4(self):
-		self.log_data_Text.insert(INSERT,'正在挖掘频繁项集...\n')
+		self.log_data_Text.insert(INSERT,self.suanfa+'：正在挖掘频繁项集...\n')
 		t=threading.Thread(target=self.aprithread)
-		t.start()
-		t.join()
-		self.result_data_Text.insert(INSERT,'频繁项集\n')	
-		for i in self.L:
-			print(i)
-			self.result_data_Text.insert(INSERT,i)
-			self.result_data_Text.insert(INSERT,'\n')
-		self.result_data_Text.insert(INSERT,len(self.L))
-		self.log_data_Text.insert(INSERT,'频繁项集已生成！\n')
+		t.setDaemon(True)
+		t.start()		
 
 	
 	def rulesthread(self):
@@ -134,20 +160,25 @@ class MY_GUI():
 				self.rules=apriori4.generateRules(self.L,self.support)
 		else:
 			self.rules = []
-			fpgrowthDiy.rulesGenerator(self.L, self.minconfig, self.rules)
+			if (self.minconfig!=0):
+				fpgrowth.rulesGenerator(self.L, self.rules, self.minconfig)
+			else:
+				fpgrowth.rulesGenerator(self.L, self.rules)
+
+		self.result_data_Text.insert(INSERT,'关联规则\n')
+		for i in self.rules:
+			self.result_data_Text.insert(INSERT,i)
+			self.result_data_Text.insert(INSERT,'\n')
+		self.result_data_Text.insert(INSERT,len(self.rules))
+		self.log_data_Text.insert(INSERT,'关联规则生成完毕! 共'+str(len(self.rules))+'项\n')
+
 
 	def click5(self):
 		self.log_data_Text.insert(INSERT,'正在生成关联规则...\n')
 		t=threading.Thread(target=self.rulesthread)
+		t.setDaemon(True)
 		t.start()
-		t.join()
-		self.result_data_Text.insert(INSERT,'关联规则\n')
-		for i in self.rules:
-			print(i)
-			self.result_data_Text.insert(INSERT,i)
-			self.result_data_Text.insert(INSERT,'\n')
-		self.result_data_Text.insert(INSERT,len(self.rules))
-		self.log_data_Text.insert(INSERT,'关联规则生成完毕...\n')
+
 
 
         # self.result_data_scrollbar_y = Scrollbar(self.window)                #创建纵向滚动条
@@ -183,10 +214,10 @@ class MY_GUI():
 
 
 
-def gui_start():
-	init_window = Tk()              #实例化出一个父窗口
-	ZMJ_PORTAL = MY_GUI(init_window)
-	ZMJ_PORTAL.set_init_window()    # 设置根窗口默认属性
-	init_window.mainloop()          #父窗口进入事件循环，可以理解为保持窗口运行，否则界面不展示
+# def gui_start():
+# 	init_window = Tk()              #实例化出一个父窗口
+# 	ZMJ_PORTAL = MY_GUI(init_window)
+# 	ZMJ_PORTAL.set_init_window()    # 设置根窗口默认属性
+# 	init_window.mainloop()          #父窗口进入事件循环，可以理解为保持窗口运行，否则界面不展示
 
-gui_start()
+# gui_start()

@@ -75,7 +75,7 @@ def scanD( D, Ck, minSupport ):
     # print(retList)                       # 汇总支持度数据  
     return retList, supportData  
 
-def apriori( dataSet, minSupport = 0.3 ):  
+def apriori( dataSet, minSupport = 0.01 ):  
     '''
         参数：
             dataSet：初始数据集
@@ -98,7 +98,7 @@ def apriori( dataSet, minSupport = 0.3 ):
         k += 1                                              # 新生成的项集中的元素个数应不断增加  
     return L,suppData                                       # 返回所有满足条件的频繁项集的列表，和所有候选项集的支持度信息   
 
-def calcConf( freqSet, H, supportData, brl, minConf=0.7 ):  # 规则生成与评价    
+def calcConf( freqSet, H, supportData, brl, minConf=0.1 ):  # 规则生成与评价    
     ''''' 
         计算规则的可信度，返回满足最小可信度的规则。 
         freqSet(frozenset):频繁项集 
@@ -112,12 +112,12 @@ def calcConf( freqSet, H, supportData, brl, minConf=0.7 ):  # 规则生成与评
     for conseq in H:  
         conf = supportData[ freqSet ] / supportData[ freqSet - conseq ]  
         if conf >= minConf:  
-            print(freqSet - conseq, '-->', conseq, 'conf:', conf)  
+            # print(freqSet - conseq, '-->', conseq, 'conf:', conf)  
             brl.append( ( freqSet - conseq, conseq, conf ) )  
             prunedH.append( conseq )  
     return prunedH  
 
-def rulesFromConseq( freqSet, H, supportData, brl, minConf=0.7 ):  
+def rulesFromConseq( freqSet, H, supportData, brl, minConf=0.1 ):  
     ''''' 
         对频繁项集中元素超过2的项集进行合并。 
         freqSet(frozenset):频繁项集 
@@ -134,7 +134,7 @@ def rulesFromConseq( freqSet, H, supportData, brl, minConf=0.7 ):
                                                                     #而calcConf函数的关联结果的右侧就是频繁子项集）的关联结果  
             rulesFromConseq( freqSet, Hmp1, supportData, brl, minConf )   
 
-def generateRules( L, support_data, min_conf=0.7 ):  
+def generateRules( L, support_data, min_conf=0.1 ):  
     ''''' 
         根据频繁项集和最小可信度生成规则。 
         L(list):存储频繁项集 
@@ -177,22 +177,22 @@ def mainfunc(myDat,minSupport=0.3,minConf=0.3):
 # mainfunc(loadDataSet)
 # loadDataSet()
 # mainfunc(loadDataSet())
-if __name__ == '__main__':  
-    myDat = loaddata.load_data(0)
-    # print(len(myDat))                                 # 导入数据集  
-    # L,suppData = apriori( myDat, 0.3)                     # 选择频繁项集  
-    # print(u'频繁项集L：',L) 
-    # print("啦啦啦")
-    # for i in L:
-    #     for x in i:
-    #         print(x,suppData[x])
-    # print(L)
-    # for var in L:
-    #     print(suppData[var])
-    # print(suppData) 
-    # print(u"所有候选项集的支持度信息：", suppData)  
-    # rules = generateRules( L, suppData, 0.7) 
-    # for x in rules:
-    #      print(x) 
-    # print(len(rules))
-    # print('rules:\n', rules)
+# if __name__ == '__main__':  
+#     myDat = loaddata.load_data(0)
+#     # print(len(myDat))                                 # 导入数据集  
+#     L,suppData = apriori( myDat, 0.1)                     # 选择频繁项集  
+#     # print(u'频繁项集L：',L) 
+#     # print("啦啦啦")
+#     # for i in L:
+#     #     for x in i:
+#     #         print(x,suppData[x])
+#     # print(L)
+#     # for var in L:
+#     #     print(suppData[var])
+#     # print(suppData) 
+#     # print(u"所有候选项集的支持度信息：", suppData)  
+#     # rules = generateRules( L, suppData, 0.7) 
+#     # for x in rules:
+#     #      print(x) 
+#     # print(len(rules))
+#     # print('rules:\n', rules)

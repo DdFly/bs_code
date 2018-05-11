@@ -1,13 +1,13 @@
 
 
 
-def load_data(path_str=0):
+def load_data(path_str='order_products__prior.csv'):
     import csv
     n=100000
     i=1
     product_dict = {}
     data_set=[]
-    cvs_file = csv.reader(open('order_products__prior.csv','r'))
+    cvs_file = csv.reader(open(path_str,'r'))
     # print(cvs_file)
     for abc in cvs_file:
         if abc[0]=='order_id':
@@ -17,8 +17,8 @@ def load_data(path_str=0):
         else:
             product_dict.setdefault(abc[0],[]).append(abc[1])
         i+=1
-        if i>n:
-            break
+        # if i>n:
+        #     break
     for l in product_dict:
         data_set.append(product_dict[l])
     # print(data_set)

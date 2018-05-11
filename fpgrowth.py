@@ -55,7 +55,7 @@ class TreeNode:
     def increaseC(self, count):
         self.count += count
 
-def createFPTree(frozenDataSet, minSupport):
+def createFPTree(frozenDataSet, minSupport=0.01):
     
     """
     构建FP-Tree
@@ -113,7 +113,7 @@ def updateHeadPointTable(headPointBeginNode, targetNode):
         headPointBeginNode = headPointBeginNode.nextSimilarItem
     headPointBeginNode.nextSimilarItem = targetNode
 
-def mineFPTree(headPointTable, prefix, frequentPatterns, minSupport):
+def mineFPTree(headPointTable, prefix, frequentPatterns, minSupport=0.01):
     #for each item in headPointTable, find conditional prefix path, create conditional fptree, then iterate until there is only one element in conditional fptree
     headPointItems = [v[0] for v in sorted(headPointTable.items(), key = lambda v:v[1][0])]
     if(len(headPointItems) == 0): return
@@ -163,7 +163,7 @@ def ascendTree(treeNode):
         prefixs.append(treeNode.nodeName)
     return prefixs
 
-def rulesGenerator(frequentPatterns, minConf, rules):
+def rulesGenerator(frequentPatterns, rules, minConf=0.1):
     for frequentset in frequentPatterns:
         if(len(frequentset) > 1):
             getRules(frequentset,frequentset, rules, frequentPatterns, minConf)
@@ -177,7 +177,7 @@ def removeStr(set, str):
     return tempFrozenSet
 
 
-def getRules(frequentset,currentset, rules, frequentPatterns, minConf):
+def getRules(frequentset,currentset, rules, frequentPatterns, minConf=0.1):
     for frequentElem in currentset:
         subSet = removeStr(currentset, frequentElem)
         confidence = frequentPatterns[frequentset] / frequentPatterns[subSet]
@@ -194,9 +194,10 @@ def getRules(frequentset,currentset, rules, frequentPatterns, minConf):
 
 # if __name__=='__main__':
 #     # print("fptree:")
-#     dataSet = loadDataSet()
+#     # dataSet = loadDataSet()
+#     dataSet = loaddata.load_data(0)
 #     frozenDataSet = transfer2FrozenDataSet(dataSet)
-#     print(frozenDataSet)
+#     # print(frozenDataSet)
 #     minSupport = 0.3
 #     fptree, headPointTable = createFPTree(frozenDataSet, minSupport)
 #     # fptree,headPointTable = fpgrouth.createTree(frozenDataSet,minSupport)
@@ -204,13 +205,13 @@ def getRules(frequentset,currentset, rules, frequentPatterns, minConf):
 #     frequentPatterns = {}
 #     prefix = set([])
 #     mineFPTree(headPointTable, prefix, frequentPatterns, minSupport)
-#     print("频繁项集\n")
-#     for x in frequentPatterns:
-#         print(x,frequentPatterns[x])
+#     # print("频繁项集\n")
+#     # for x in frequentPatterns:
+#     #     print(x,frequentPatterns[x])
 #     minConf = 0.7
 #     rules = []
 #     rulesGenerator(frequentPatterns, minConf, rules)
-#     print("关联规则\n")
-#     for x in rules:
-#         print(x)
+#     # print("关联规则\n")
+#     # for x in rules:
+#     #     print(x)
 #     print(len(rules))
