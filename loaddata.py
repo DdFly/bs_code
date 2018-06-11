@@ -1,28 +1,26 @@
 
+import csv
 
+def load_data(path_str='order_products.csv'):
 
-def load_data(path_str='order_products__prior.csv'):
-    import csv
-    n=100000
-    i=1
-    product_dict = {}
-    data_set=[]
+    data_set = []
     cvs_file = csv.reader(open(path_str,'r'))
-    # print(cvs_file)
-    for abc in cvs_file:
-        if abc[0]=='order_id':
+    n=0
+    for x in cvs_file:
+        if (x[0]=='order_id'):
             continue
-        if abc[0] in product_dict:
-            product_dict[abc[0]].append(abc[1])
-        else:
-            product_dict.setdefault(abc[0],[]).append(abc[1])
-        i+=1
-        # if i>n:
+        data_set.append(x[1].split(";"))
+        n+=1
+        # if (n>30000):
         #     break
-    for l in product_dict:
-        data_set.append(product_dict[l])
-    # print(data_set)
+
+   
+
     # data_set = [['l1', 'l2', 'l5'], ['l2', 'l4'], ['l2', 'l3'],['l1','l2','l3','l4','l5','l6','l7'],
     #         ['l1', 'l2', 'l4'], ['l1', 'l3'], ['l2', 'l3'],
     #         ['l1', 'l3'], ['l1', 'l2', 'l3','l4', 'l5'], ['l1', 'l2', 'l3','l4']]
+    # print(data_set)
+    # for i in data_set:
+    #     print (i)
     return data_set
+# load_data()

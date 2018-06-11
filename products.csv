@@ -576,7 +576,7 @@ product_id,product_name,aisle_id,department_id
 575,Organic Medium Yellow Thai Curry,72,13
 576,Vanilla Sugar Cookies,61,19
 577,Liqui-Gels Softgels Dye-Free Allergy,11,11
-578,"10\"" Bamboo Skewers",10,17
+578,Bamboo Skewers,10,17
 579,Stain Odor Eliminator Detergent,75,17
 580,Washington State Merlot,28,5
 581,Garnet Sweet Potato (Yam),83,4
@@ -714,7 +714,7 @@ product_id,product_name,aisle_id,department_id
 713,Pink Moscato California,6,2
 714,Breakfast Blend Light Roast K-Cup Packs,26,7
 715,Vitamin C Formula 1000 mg Vegetarian Tablets,47,11
-716,Mouthwash Clean Mint Listerine¬Æ Zero‚Ñ¢,20,11
+716,Mouthwash Clean Mint Listerine¬Æ Zero‚Ñ?20,11,
 717,Sweeper Open Window Fresh Scent Wet Mopping Cloths Refill,114,17
 718,Traditional Chicken Tuscany Soup,69,15
 719,Scars Cream + SPF 30,118,11
@@ -928,7 +928,7 @@ product_id,product_name,aisle_id,department_id
 927,"Cabernet Sauvignon, Central Coast, 2011",28,5
 928,Chunky Classic Chicken Noodle Soup,69,15
 929,New England Clam Chowder Condensed Soup,69,15
-930,ULTRACLEAN‚Ñ¢ Cool Mint ULTRACLEAN‚Ñ¢,20,11
+930,ULTRACLEAN‚Ñ?Cool Mint ULTRACLEAN‚Ñ?20,11,
 931,Lash Discovery Waterproof Mascara - Very Black,132,11
 932,Vegetable Pie In A Pocket Sandwich,38,1
 933,Roarin' Waters Wild Cherry Water Beverage,98,7
@@ -1695,7 +1695,7 @@ product_id,product_name,aisle_id,department_id
 1694,Chunky Chocolate Chip Cookies,61,19
 1695,Major Dickason's Blend Ground Coffee Dark Roast,26,7
 1696,Honey Oat,93,3
-1697,Clean Breeze‚Ñ¢ Fabric Softener Dryer sheets 105 count  Fabric Enhancers,75,17
+1697,Clean Breeze‚Ñ?Fabric Softener Dryer sheets 105 count  Fabric Enhancers,75,17
 1698,Chick Pea Salad,67,20
 1699,Jumilla Red Wine,28,5
 1700,White Cheddar Popcorn,23,19
@@ -1776,7 +1776,7 @@ product_id,product_name,aisle_id,department_id
 1775,Caramel Macchiato Creamer,53,16
 1776,Thin & Crispy Margherita Frozen Pizza,79,1
 1777,Home Menu Beef with Broccoli,38,1
-1778,Pull-Ups Night‚ÄëTime Training Pants 2T‚Äë3T,56,18
+1778,Pull-Ups Night‚ÄëTime Training Pants 2T‚Ä?T,56,18
 1779,"Jam, Fig & Ginger",88,13
 1780,Maximum Absorbency Regular Length Incontinence Pads,126,11
 1781,"Highlighting Conditioner, Henna Gold",22,11
@@ -2705,7 +2705,7 @@ product_id,product_name,aisle_id,department_id
 2704,Tofu Rancheros,52,1
 2705,Organic Cat Nip,41,8
 2706,Hot Pepper Jelly,88,13
-2707,Complete‚Ñ¢ ActionPacs‚Ñ¢ Fresh Scent Dishwasher Detergent,74,17
+2707,Complete‚Ñ?ActionPacs‚Ñ?Fresh Scent Dishwasher Detergent,74,17
 2708,Fruit By the Foot Variety Pack,50,19
 2709,"Dijon Mustard Blend, Rich Country",72,13
 2710,Crushed Rosemary,104,13
@@ -3274,7 +3274,7 @@ product_id,product_name,aisle_id,department_id
 3273,Home Menu Orange Chicken,38,1
 3274,Black Tea Pyramids,94,7
 3275,Mozzarella Log,21,16
-3276,Infusions Ultra Downy¬Æ Infusions‚Ñ¢ Lavender Serenity‚Ñ¢ Fabric Softener Sheets 90 count Fabric Enhancers,75,17
+3276,Infusions Ultra Downy¬Æ Infusions‚Ñ?Lavender Serenity‚Ñ?Fabric Softener Sheets 90 count Fabric Enhancers,75,17
 3277,Overnight Diapers Sleepy Sheep Size 4,56,18
 3278,Primadophilus For Children,6,2
 3279,Spinach Ricotta Ravioli,38,1
@@ -3622,7 +3622,7 @@ product_id,product_name,aisle_id,department_id
 3621,Apple Butter Spread,88,13
 3622,Cotes De Provence,6,2
 3623,Frank's Red Hot Buffalo Ranch Dressing,89,13
-3624,OTC‚Ñ¢ Heartburn Capsules,70,11
+3624,OTC‚Ñ?Heartburn Capsules,70,11
 3625,"Original, Hummus Chips",107,19
 3626,Hickory Smoked Classic Cut Bacon,106,12
 3627,Organic Baby Corn Pieces,81,15
@@ -4916,7 +4916,7 @@ product_id,product_name,aisle_id,department_id
 4915,Smoothie,31,7
 4916,Disney Frozen Berry Cherry Raspberry Ice Pops,37,1
 4917,Buttermilk Ranch Pretzel Pieces,107,19
-4918,Pure & Free‚Ñ¢ Baby Sunblock Sunscreen Lotion SPF 60+,73,11
+4918,Pure & Free‚Ñ?Baby Sunblock Sunscreen Lotion SPF 60+,73,11
 4919,Unscented Dishwasher Detergents,74,17
 4920,Seedless Red Grapes,123,4
 4921,Organic Roasted Garlic Mushroom Lentil Soup,69,15
@@ -5642,7 +5642,7 @@ product_id,product_name,aisle_id,department_id
 5641,Cinnamon Cardamon And Ginger Cultured Butter,36,16
 5642,Organic Stage 3 Spaghetti with Cheese 6 Ounce Jar,92,18
 5643,Spicy Black Bean Veggie Burger,100,21
-5644,Fine Fragrance Love Forever‚Ñ¢ Body Wash,127,11
+5644,Fine Fragrance Love Forever‚Ñ?Body Wash,127,11
 5645,Meatless and Soy Free Sausage Patties,52,1
 5646,Organic Turkey Bacon,106,12
 5647,Latex Disposable Gloves,114,17
@@ -5660,7 +5660,7 @@ product_id,product_name,aisle_id,department_id
 5659,Herb Popcorn,23,19
 5660,Storage Containers,85,17
 5661,Instant Mashed Potato,4,9
-5662,Line Express‚Ñ¢ Eyeliner - Soft Black 902,132,11
+5662,Line Express‚Ñ?Eyeliner - Soft Black 902,132,11
 5663,Chocolate Energy Supplement,47,11
 5664,Lucky Candy Bar,45,19
 5665,Original Soft & Chewy Candy,45,19
@@ -6168,7 +6168,7 @@ product_id,product_name,aisle_id,department_id
 6167,Green Apple Sparkling Soda,77,7
 6168,Punjabi Style Butter Chicken Cooking Sauce,76,6
 6169,Artichoke Truffle Sauce,81,15
-6170,Simple Styles‚Ñ¢ Spin Pins 2ct - Assorted Colors,22,11
+6170,Simple Styles‚Ñ?Spin Pins 2ct - Assorted Colors,22,11
 6171,Crunchy Butterfly Shrimp,38,1
 6172,Honey Pure Wildflower,29,13
 6173,Pitted Castelvetrano Olives,110,13
@@ -6603,7 +6603,7 @@ product_id,product_name,aisle_id,department_id
 6602,Hair Repair Shampoo,22,11
 6603,Organic Marshmallow Root,47,11
 6604,"Streak-Free Clean + Protect, Stainless Steel",114,17
-6605,Ultra Downy¬Æ Mountain Spring‚Ñ¢ Liquid Fabric Conditioner 51 Fl oz. 60 loads Fabric Enhancers,75,17
+6605,Ultra Downy¬Æ Mountain Spring‚Ñ?Liquid Fabric Conditioner 51 Fl oz. 60 loads Fabric Enhancers,75,17
 6606,Gluten Free Garden Vegetable Lasagna,38,1
 6607,Organic Blueberry Fruit Spread,88,13
 6608,Instant Coconut Cream Pudding,105,13
@@ -6883,7 +6883,7 @@ product_id,product_name,aisle_id,department_id
 6882,Strawberry and Milk Frozen Fruit Bar,37,1
 6883,Mesh Bath Sponge,127,11
 6884,Crunchy Honey Roasted Granola,57,14
-6885,D-Vi-Sol‚Ñ¢ Vitamin D Supplement Drops for Infants,47,11
+6885,D-Vi-Sol‚Ñ?Vitamin D Supplement Drops for Infants,47,11
 6886,Vitamin Code Raw D3 5000 IU,47,11
 6887,Southwestern Egg Substitute,86,16
 6888,Buffalo Chicken Mac & Cheese,13,20
@@ -7722,7 +7722,7 @@ product_id,product_name,aisle_id,department_id
 7721,Glazed Cherry Pie,61,19
 7722,C-Boost Fruit Juice Smoothie,31,7
 7723,Minions Macaroni & Cheese Dinner,4,9
-7724,Cold Max Daytime Non-Drowsy Citrus Burst‚Ñ¢ Liquid,11,11
+7724,Cold Max Daytime Non-Drowsy Citrus Burst‚Ñ?Liquid,11,11
 7725,Fiber Whole Grain Crispbread,78,19
 7726,Blue 1000 Mg Vitamin C Triple Berry Fizzy Drink Mix,11,11
 7727,Fisherman's Wharf Seafood Seasoning,104,13
@@ -8578,7 +8578,7 @@ product_id,product_name,aisle_id,department_id
 8577,Essence Peach Nectarine,115,7
 8578,Hello Hydration Moisturizing Shampoo With Coconut Essenses,22,11
 8579,Raspberry Flavor Extract,17,13
-8580,VitaminWater Zero‚Ñ¢ XXX Acai Blueberry Pomegranate,64,7
+8580,VitaminWater Zero‚Ñ?XXX Acai Blueberry Pomegranate,64,7
 8581,Sesame Bagels 5 Count,58,1
 8582,Banana Vanilla Freeze Dried Yogurt & Fruit Snacks,92,18
 8583,"Plus Febreze Sport Active Fresh Scent Liquid Laundry Detergent, 46 oz, 24 loads Laundry",75,17
@@ -8962,7 +8962,7 @@ product_id,product_name,aisle_id,department_id
 8961,English Hydro Cucumber,123,4
 8962,Grilled and Ready Sweet Asian Chicken Thigh Fillets,34,1
 8963,"Popped Potato Snack, Crazy Hot",107,19
-8964,Kickin‚Äô BBQ Chopped Salad,123,4
+8964,Kickin‚Ä?BBQ Chopped Salad,123,4
 8965,Louisiana Crunch Cake,8,3
 8966,Riserva Roasted Garlic Pasta Sauce,9,9
 8967,Lamb Rice Adult Dog,40,8
@@ -9841,7 +9841,7 @@ product_id,product_name,aisle_id,department_id
 9840,Grilled Chicken Pesto with Vegetables Cafe Steamers,38,1
 9841,Mac & Cheese Pasta in Cheese Sauce,59,15
 9842,Bittersweet 70% Cacao Baking Chunks,17,13
-9843,Fresher Collection‚Ñ¢ Timber‚Ñ¢ Scent Invisible Solid Men's Anti-Perspirant & Deoderant,80,11
+9843,Fresher Collection‚Ñ?Timber‚Ñ?Scent Invisible Solid Men's Anti-Perspirant & Deoderant,80,11
 9844,Raspberry Iced Tea,94,7
 9845,Cheddar,2,16
 9846,Simply Dressed Coleslaw Dressing,89,13
@@ -10469,7 +10469,7 @@ product_id,product_name,aisle_id,department_id
 10468,Natural Bliss All Natural Coffee Creamer Sweet Cream Flavor,53,16
 10469,Brown Rice Pasta Shells,131,9
 10470,B Side Red,28,5
-10471,Therapy‚Ñ¢ Aches and Pains Mineral Bath Soak,133,11
+10471,Therapy‚Ñ?Aches and Pains Mineral Bath Soak,133,11
 10472,Caramel Apple Crumble Pie Pops,37,1
 10473,Half And Half Cream,53,16
 10474,NuStevia White Stevia Powder,17,13
@@ -11906,7 +11906,7 @@ product_id,product_name,aisle_id,department_id
 11905,Hot Dill Pickle Chips,110,13
 11906,Pinenuts,117,19
 11907,Designer Paper Bowls,111,17
-11908,+Energy Black Cherry Vegetable & Fruit Juice,31,7
+11908,#NAME?,31,7
 11909,White Instant Enriched Long Grain Rice,4,9
 11910,Alive! Women's Multi Vitamin Max Potency,47,11
 11911,"Shampoo, Deep Conditioning, Olive & Avocado",22,11
@@ -12207,7 +12207,7 @@ product_id,product_name,aisle_id,department_id
 12206,Basil Pesto,9,9
 12207,Organic Cheddar & Broccoli Quinoa Squares,78,19
 12208,Organic Protein Chocolate & Almond & Coconut Milk Superfood Smoothie,31,7
-12209,Infusions Ultra Downy¬Æ Infusions‚Ñ¢ Lavender Serenity‚Ñ¢ Liquid Fabric Conditioner 41 FL Oz Fabric Enhancers,75,17
+12209,Infusions Ultra Downy¬Æ Infusions‚Ñ?Lavender Serenity‚Ñ?Liquid Fabric Conditioner 41 FL Oz Fabric Enhancers,75,17
 12210,Organic Bunashimeji Mushrooms,123,4
 12211,Gluten Free Organic Taco Sliders Corn Tortillas,30,6
 12212,Unscented 1000 Sheets Per Roll Bathroom Tissue,54,17
@@ -12578,7 +12578,7 @@ product_id,product_name,aisle_id,department_id
 12577,Indian Cuisine Bengal Lentils,76,6
 12578,Cinn A Rolls,52,1
 12579,Cashews,117,19
-12580,3D White‚Ñ¢ Luxe Mouthwash - Fresh Mint,20,11
+12580,3D White‚Ñ?Luxe Mouthwash - Fresh Mint,20,11
 12581,Gluten Free Supreme Pizza,79,1
 12582,ColorStay Eyeliner - Black Brown,132,11
 12583,Organic Gold Beets,83,4
@@ -13599,7 +13599,7 @@ product_id,product_name,aisle_id,department_id
 13598,Soy & Dairy Free Plain Unsweetened Almond Milk Yogurt,100,21
 13599,Ravishing Rocky Road,45,19
 13600,Cream Of Tartar Powder,104,13
-13601,Infusions Ultra Downy¬Æ Infusions‚Ñ¢ Botanical Mist‚Ñ¢ Fabric Softener Sheets 105 count Fabric Enhancers,75,17
+13601,Infusions Ultra Downy¬Æ Infusions‚Ñ?Botanical Mist‚Ñ?Fabric Softener Sheets 105 count Fabric Enhancers,75,17
 13602,Wheat Krisp Protein Bar,3,19
 13603,Tarragon Chicken Salad,1,20
 13604,Baked Chipotle Tofu,66,6
@@ -13612,7 +13612,7 @@ product_id,product_name,aisle_id,department_id
 13611,Greek Nonfat Yogurt Strawberry,120,16
 13612,Dark Truffle Piglet Chocolate Bar,45,19
 13613,Berry Mint Gems,46,19
-13614,Spring & Renewal‚Ñ¢ Liquid Fabric Conditioner,75,17
+13614,Spring & Renewal‚Ñ?Liquid Fabric Conditioner,75,17
 13615,"Cookies, Family Recipe, Ginger Snap",61,19
 13616,Steam Fingerling Potato,123,4
 13617,Banana Split Ice Cream,37,1
@@ -17603,7 +17603,7 @@ product_id,product_name,aisle_id,department_id
 17602,Chunky Traditional Pasta Sauce,9,9
 17603,"Pinto Beans, Refried",59,15
 17604,Sweet Dreams Organic Brown Rice Syrup,29,13
-17605,Spectacular Speculoos‚Ñ¢ Cookie Core‚Ñ¢ Ice Cream,37,1
+17605,Spectacular Speculoos‚Ñ?Cookie Core‚Ñ?Ice Cream,37,1
 17606,Premium Chocolate Powdered Peanut Butter,88,13
 17607,Greek Yogurt Farmer Ranch Dip,51,13
 17608,Junami Apple,24,4
@@ -18633,7 +18633,7 @@ product_id,product_name,aisle_id,department_id
 18632,WetJet Open Window Fresh Scent Liquid Cleaner Refill,114,17
 18633,Balsamic Vinaigrette Steak House Dressing,89,13
 18634,Poppy Seed,104,13
-18635,Positively Smooth‚Ñ¢ Shave Gel,55,11
+18635,Positively Smooth‚Ñ?Shave Gel,55,11
 18636,Ultra Clean Arctic Mint,20,11
 18637,Ritz Crackers And Cheese Dip Handi-Snacks,78,19
 18638,Lamb Shoulder Chop,122,12
@@ -19915,7 +19915,7 @@ product_id,product_name,aisle_id,department_id
 19914,Tangerine Immunity Defense Powder,47,11
 19915,No Sugar Added Apple Sauce,99,15
 19916,Studio Line Clean Gel,22,11
-19917,Complete‚Ñ¢ ActionPacs‚Ñ¢  Lemon Burst Dishwasher Detergent,74,17
+19917,Complete‚Ñ?ActionPacs‚Ñ? Lemon Burst Dishwasher Detergent,74,17
 19918,Original Scent  Liquid Fabric Softener,75,17
 19919,Fish,34,1
 19920,Star Wars Decorated,118,11
@@ -21561,7 +21561,7 @@ product_id,product_name,aisle_id,department_id
 21560,Cut Hearts Of Palm,1,20
 21561,Summer Sausage Original Premium,106,12
 21562,Naturally Rising Crust Canadian Style Bacon & Pineapple Pizza,79,1
-21563,Infusions Ultra Infusions‚Ñ¢ Lavender Serenity‚Ñ¢ Liquid Fabric Conditioner Fabric Enhancers,75,17
+21563,Infusions Ultra Infusions‚Ñ?Lavender Serenity‚Ñ?Liquid Fabric Conditioner Fabric Enhancers,75,17
 21564,Tender Centers Tuna & Whitefish Flavors Dry Cat Food,41,8
 21565,World Baby Beans & Rice with Sweet Corn Organic Baby Food,92,18
 21566,Licorice Log,45,19
@@ -23272,7 +23272,7 @@ product_id,product_name,aisle_id,department_id
 23271,Tabasco Chipotle Pepper Sauce,72,13
 23272,"Juice Blend, Organic Vegetable, Greens & Orange",31,7
 23273,Cheese & Herb Pizza,79,1
-23274,Bedtime Moisture Wash‚Ñ¢ Baby,102,18
+23274,Bedtime Moisture Wash‚Ñ?Baby,102,18
 23275,Kuzu Root Starch,66,6
 23276,Soup and Oyster Crackers,78,19
 23277,Classic Peanuts,117,19
@@ -24647,7 +24647,7 @@ product_id,product_name,aisle_id,department_id
 24646,Bug Barrier,87,17
 24647,Sage Deodorant Spray,80,11
 24648,Irish Oatmeal,130,14
-24649,Freshmates Charmin Freshmates‚Ñ¢,54,17
+24649,Freshmates Charmin Freshmates‚Ñ?54,17,
 24650,"Cough & Congestion, Cherry Flavor",11,11
 24651,Orange Clove Liquid Dish Soap,74,17
 24652,Dill Pickle Crunchy Popcorn,23,19
@@ -25185,7 +25185,7 @@ product_id,product_name,aisle_id,department_id
 25184,PeroxiClear Lens Solution,44,11
 25185,"Cheese, Pasteurized Process, Cheddar, Hot Stuff Buffalo Wing",2,16
 25186,Vegan Shanghai Dumplings,13,20
-25187,Hand Renewal with Olay¬Æ Pomegranate Splash‚Ñ¢ Dishwashing Liquid,74,17
+25187,Hand Renewal with Olay¬Æ Pomegranate Splash‚Ñ?Dishwashing Liquid,74,17
 25188,Zoe Organic EVOO,19,13
 25189,"Acidil, Quick-Dissolving Tablets",47,11
 25190,Pure Unfiltered Honey Squeeze Bear,29,13
@@ -25493,7 +25493,7 @@ product_id,product_name,aisle_id,department_id
 25492,"Tofu, Firm",66,6
 25493,Cookies 'n Cream with Oreo Cookie Pieces Lowfat Yogurt,120,16
 25494,Medium House Blend Ground Coffee,26,7
-25495,Flip‚Ñ¢ Low-Fat Key Lime Crumble Greek Yogurt,120,16
+25495,Flip‚Ñ?Low-Fat Key Lime Crumble Greek Yogurt,120,16
 25496,Baby Zucchini Squash,100,21
 25497,Antioxidant Kit Salad,123,4
 25498,Spicy Tomato & Parmesan Cream Pasta Sauce,9,9
@@ -26052,7 +26052,7 @@ product_id,product_name,aisle_id,department_id
 26051,Dulce De Leche Sauce,103,19
 26052,Mixed Berry Greek Yogurt,120,16
 26053,All Natural Poppy Seed Dressing,89,13
-26054,April Fresh‚Ñ¢ Fabric Softener Dryer sheets 105 count  Fabric Enhancers,75,17
+26054,April Fresh‚Ñ?Fabric Softener Dryer sheets 105 count  Fabric Enhancers,75,17
 26055,Original Fruit Chews,45,19
 26056,Old Rasputin Stout Beer,27,5
 26057,Gia Mild Giardiniera,110,13
@@ -27061,7 +27061,7 @@ product_id,product_name,aisle_id,department_id
 27060,Kisses Cookies 'n' Cr√®me Candies,45,19
 27061,Sweet Potato Apple Stage 2 Baby Food,92,18
 27062,Traditional Crust Pepperoni Pizza,79,1
-27063,Complete Multi-Benefit‚Ñ¢ Herbal Mint Toothpaste,20,11
+27063,Complete Multi-Benefit‚Ñ?Herbal Mint Toothpaste,20,11
 27064,85% Lean Natural Ground Beef,7,12
 27065,All Natural Chicken Drumsticks,35,12
 27066,96% Fat Free Multi Grain Whole Wheat Tortillas,128,3
@@ -27567,7 +27567,7 @@ product_id,product_name,aisle_id,department_id
 27566,Gentle Iron 25 mg,47,11
 27567,Liquid Coconut Premium Oil,25,11
 27568,Citrus Punch,98,7
-27569,Peanut Buttah Cookie Core‚Ñ¢ Ice Cream,37,1
+27569,Peanut Buttah Cookie Core‚Ñ?Ice Cream,37,1
 27570,Beef Flavor Ramen Noodle Soup,4,9
 27571,Dairy Free Soymilk Neapolitan Non-Dairy Frozen Dessert,37,1
 27572,Natural Casing Polska Kielbasa,96,20
@@ -28105,7 +28105,7 @@ product_id,product_name,aisle_id,department_id
 28104,Artisan Roasted Chicken Broth,69,15
 28105,Pure & 100% Natural Vegetable Oil,19,13
 28106,Organic Tri-Colored Peppers,116,1
-28107,Line Express‚Ñ¢ Eyeliner - Ebony Black,132,11
+28107,Line Express‚Ñ?Eyeliner - Ebony Black,132,11
 28108,Bath & Shower Gloves,87,17
 28109,"Plus Febreze Sport Active Fresh Scent Liquid Laundry Detergent, 92 oz, 48 loads Laundry",75,17
 28110,General Mills Basic 4 Cereal,121,14
@@ -28461,7 +28461,7 @@ product_id,product_name,aisle_id,department_id
 28460,Original Whiskey,124,5
 28461,Light Fruit Punch,100,21
 28462,Yellow Rice & Chicken with Vegetables in Sauce with Green Beans & Carrots,92,18
-28463,Ultra Downy¬Æ Clean Breeze‚Ñ¢ Liquid Fabric Conditioner 34 Fl oz. 40 loads Fabric Enhancers,75,17
+28463,Ultra Downy¬Æ Clean Breeze‚Ñ?Liquid Fabric Conditioner 34 Fl oz. 40 loads Fabric Enhancers,75,17
 28464,"Whipped Light Cream, Original",53,16
 28465,Icelandic Style Skyr Blueberry Non-fat Yogurt,120,16
 28466,Cookie Dipped Drumsticks,37,1
@@ -28959,7 +28959,7 @@ product_id,product_name,aisle_id,department_id
 28958,Raspberry Coffee Cake,8,3
 28959,Organic Lentils,63,9
 28960,1000 Roses Color + Correct Sheer Nude SPF 30 for Sensitive Skin,25,11
-28961,Hazed & Confused‚Ñ¢ Core Ice Cream,37,1
+28961,Hazed & Confused‚Ñ?Core Ice Cream,37,1
 28962,Tuscan Inspired Uncured Two Meat Pizza,38,1
 28963,Naked Sponges - 2 CT,114,17
 28964,Original Disney Princess Spaghetti Os Cool Shapes Pasta in Tomato & Cheese Sauce,100,21
@@ -32266,7 +32266,7 @@ product_id,product_name,aisle_id,department_id
 32265,ForceFlex Drawstring Tall Kitchen Bags,60,17
 32266,Manhattan Cherry Chip Ice Cream,37,1
 32267,Twelve Essentials Fruit and Vegetable Juice,31,7
-32268,Night Cool Burst‚Ñ¢ Cold Multi-Symptom Liquid,11,11
+32268,Night Cool Burst‚Ñ?Cold Multi-Symptom Liquid,11,11
 32269,3D White Brilliance Boost Toothpaste,20,11
 32270,Spice Wrld Organic Garlic,123,4
 32271,Original Applesauce,99,15
@@ -32329,12 +32329,12 @@ product_id,product_name,aisle_id,department_id
 32328,Chipotle Mozzarella & Lime Smoked Sausage,106,12
 32329,Imported Beer from Mexico,27,5
 32330,Protein Plus Farfalle Multigrain Pasta,131,9
-32331,Flip‚Ñ¢ Low-Fat Almond Coco Loco Lowfat Greek Yogurt,120,16
+32331,Flip‚Ñ?Low-Fat Almond Coco Loco Lowfat Greek Yogurt,120,16
 32332,Kettle Classics Original Potato Chips,107,19
 32333,Apple + Banana Fruit Bar,3,19
 32334,Lightdays¬Æ Regular Pantiliners,126,11
 32335,Overnites Size 5 Diapers,56,18
-32336,DianaÔøΩs Bananas Milk Chocolate with Peanuts - Banana Babies ÔøΩ 5 CT,37,1
+32336,DianaÔøΩs Bananas Milk Chocolate with Peanuts - Banana Babies Ôø?5 CT,37,1
 32337,Organic Turkey Quinoa Apple Sweet Potato Homestyle Meal 9+ Months,92,18
 32338,Natural Jif Creamy Peanut Butter Spread,88,13
 32339,"Bread, French, Sweet, Sliced",112,3
@@ -32705,7 +32705,7 @@ product_id,product_name,aisle_id,department_id
 32704,Vitamin Code Men's Raw Whole Food Mutlivitamin,47,11
 32705,Gluten Free Oatmeal Brown Sugar and Maple with Flax & Chia,130,14
 32706,Vanilla Bean Plant Protein,65,11
-32707,Platinum‚Ñ¢ ActionPacs‚Ñ¢ Fresh Scent Dishwasher Detergent,74,17
+32707,Platinum‚Ñ?ActionPacs‚Ñ?Fresh Scent Dishwasher Detergent,74,17
 32708,White Shabbos Candles,33,6
 32709,PlugIns Scented Oil Crisp Waters,101,17
 32710,Portabella Mushroom,83,4
@@ -33108,7 +33108,7 @@ product_id,product_name,aisle_id,department_id
 33107,Homestyle Meals Organic Baby Food,92,18
 33108,Bean & Cheese & Beef & Bean Variety Pack Burritos,38,1
 33109,Greek Plain Whole Milk Yogurt,120,16
-33110,9‚Äù Ultra Strong Designer Paper Plates,111,17
+33110,9‚Ä?Ultra Strong Designer Paper Plates,111,17
 33111,Sweet & Salty Caramel,67,20
 33112,Krinkle Cut Carolina BBQ Potato Chips,107,19
 33113,Simply Potaoes Traditional Mashed Potatoes,129,1
@@ -33867,7 +33867,7 @@ product_id,product_name,aisle_id,department_id
 33866,Sea Salt Caramel Baking Chips,100,21
 33867,Laudemio Extra Virgin Olive Oil,19,13
 33868,Go Pumpkins Organic Raw Pumpkin Seeds,117,19
-33869,Urinary Pain Relief‚Ñ¢ Maximum Strength,47,11
+33869,Urinary Pain Relief‚Ñ?Maximum Strength,47,11
 33870,Bonito Del Norte En Aceita De Oliva,95,15
 33871,Smarty Dish Pink Grapefruit Dishwasher Detergent Tabs,74,17
 33872,Smooth Peanut Butter,88,13
@@ -34776,7 +34776,7 @@ product_id,product_name,aisle_id,department_id
 34775,Vanilla Honey Graham Crunchy Cookies,61,19
 34776,Double Caramel Swirl Bars made with Low Fat Ice Cream,37,1
 34777,Medium Peach Salsa,51,13
-34778,Platinum Power Clean‚Ñ¢ Refreshing Rain‚Ñ¢ Dishwashing Liquid,74,17
+34778,Platinum Power Clean‚Ñ?Refreshing Rain‚Ñ?Dishwashing Liquid,74,17
 34779,Greek Low Fat Strained Honey Blended Yogurt With Glazed Pecans,100,21
 34780,Yahrzeit Memorial Candle,101,17
 34781,Whole Black Pepper,104,13
@@ -35143,7 +35143,7 @@ product_id,product_name,aisle_id,department_id
 35142,Organic Breakfast Blend Coffee,6,2
 35143,Organic Turkey Gravy Mix,4,9
 35144,Tartufo Salami,96,20
-35145,Infusions Ultra Downy¬Æ Infusions‚Ñ¢ Lavender Serenity‚Ñ¢ Fabric Softener Sheets 105 count Fabric Enhancers,75,17
+35145,Infusions Ultra Downy¬Æ Infusions‚Ñ?Lavender Serenity‚Ñ?Fabric Softener Sheets 105 count Fabric Enhancers,75,17
 35146,Wipe & Go Instant Stain Remover Wipes,75,17
 35147,Medium Roast Whole Bean Coffee,26,7
 35148,Pale Ale & Honey Spice Mustard,72,13
@@ -35242,7 +35242,7 @@ product_id,product_name,aisle_id,department_id
 35241,Organic Khao Deng Ruby Red Rice,63,9
 35242,Cornmeal Crust 3 Cheese Pizza,79,1
 35243,Lemongrass & Tea Tree With Orange Peel Body Wash,25,11
-35244,Bedtime Bath‚Ñ¢ Baby Bath,102,18
+35244,Bedtime Bath‚Ñ?Baby Bath,102,18
 35245,Vitamin E Stick,109,11
 35246,6.25 Oz LifeSavers Wintogreen Peg,46,19
 35247,Stout Steak & Potato Handheld Aussie Pies,38,1
@@ -37757,7 +37757,7 @@ product_id,product_name,aisle_id,department_id
 37756,Prune Juice with Pulp,98,7
 37757,Fresh Ground Crunchy Peanut Butter,88,13
 37758,Kissed Caramel Flavored Vodka,124,5
-37759,SpongeBob SquarePants‚Ñ¢ Adhesive Bandages,118,11
+37759,SpongeBob SquarePants‚Ñ?Adhesive Bandages,118,11
 37760,Cherry Flavor Infants' Oral Suspension,6,2
 37761,Curry Spice,104,13
 37762,Strawberry Kefir,120,16
@@ -37880,7 +37880,7 @@ product_id,product_name,aisle_id,department_id
 37879,Sheer Moisture Lip Tint Glisten,132,11
 37880,Gelous Grip Hairbrush Frizz-Free + Anti-Static Smoothing,100,21
 37881,Ziti Rigate Penne,131,9
-37882,Unstoppable‚Ñ¢ Eyeliner - Onyx,22,11
+37882,Unstoppable‚Ñ?Eyeliner - Onyx,22,11
 37883,Odor Shield Scoopable Cat Litter Scented,41,8
 37884,Thick Sliced Bologna,100,21
 37885,Nacho Tortilla Chips,107,19
@@ -38165,7 +38165,7 @@ product_id,product_name,aisle_id,department_id
 38164,Almonds & Sea Salt in Dark Chocolate,45,19
 38165,Riesling Central Coast,62,5
 38166,Ultimate Loaded Bacon And Cheddar,107,19
-38167,Ultra Downy¬Æ Clean Breeze‚Ñ¢ Liquid Fabric Conditioner 51 Fl oz. 60 loads Fabric Enhancers,75,17
+38167,Ultra Downy¬Æ Clean Breeze‚Ñ?Liquid Fabric Conditioner 51 Fl oz. 60 loads Fabric Enhancers,75,17
 38168,Kale Greens Bunch,83,4
 38169,Chai Ultra Spice Tea,94,7
 38170,Whole Tomatoes,81,15
@@ -38601,7 +38601,7 @@ product_id,product_name,aisle_id,department_id
 38600,Pickled Asparagus,110,13
 38601,Breakfast Americana,94,7
 38602,Medium Shells,131,9
-38603,3D White Luxe‚Ñ¢ Toothpaste  - Vibrant Mint,20,11
+38603,3D White Luxe‚Ñ?Toothpaste  - Vibrant Mint,20,11
 38604,Advanced Hairstyle Boost It Volume Inject Mousse,22,11
 38605,Handi Scrub,114,17
 38606,Raspberry Sherbert,37,1
@@ -39418,7 +39418,7 @@ product_id,product_name,aisle_id,department_id
 39417,Cajun Krab Dip,67,20
 39418,Sparkling Spruce Timeless Joy Holiday Candle,100,21
 39419,3 in 1 Healthy Trinity Probiotic Dietary Supplement Capsules,47,11
-39420,Ultra Dawn¬Æ Ultra Dishwashing Liquid Antibacterial Apple Blossom‚Ñ¢ 75 Oz Dish Care,74,17
+39420,Ultra Dawn¬Æ Ultra Dishwashing Liquid Antibacterial Apple Blossom‚Ñ?75 Oz Dish Care,74,17
 39421,Achiote Organic Seasoning,104,13
 39422,Season Tyme Leaves .5 Oz,6,2
 39423,Disinfecting Wipes Lemon & Fresh Scent,114,17
@@ -42128,7 +42128,7 @@ product_id,product_name,aisle_id,department_id
 42127,Blue Eucalyptus and Lavender Natural Liquid Laundry Detergent,75,17
 42128,Organic Apple Sauce Baby Food Stage 1,92,18
 42129,"Oat Flour, Whole Grain",17,13
-42130,Pro-Health‚Ñ¢ Invigorating Clean Mouthwash - Invigorating Mint,20,11
+42130,Pro-Health‚Ñ?Invigorating Clean Mouthwash - Invigorating Mint,20,11
 42131,Hershey's Chocolate Chunk Cookie Mix,105,13
 42132,Orange Flavor,17,13
 42133,100% Organic Bay Leaves,104,13
@@ -42959,7 +42959,7 @@ product_id,product_name,aisle_id,department_id
 42958,Rustic Baguette,112,3
 42959,Jet-Dry Original Rinse Aid,74,17
 42960,All Purpose Greek Seasoning,112,3
-42961,Ultra Downy¬Æ Mountain Spring‚Ñ¢,75,17
+42961,Ultra Downy¬Æ Mountain Spring‚Ñ?75,17,
 42962,Zap Ems Macaroni & Cheese,38,1
 42963,Casaba Melon,24,4
 42964,Gluten Free Spaghetti Pasta,131,9
@@ -43637,7 +43637,7 @@ product_id,product_name,aisle_id,department_id
 43636,Organic Dog Cookies Peanut Butter,40,8
 43637,Sun Dried Tomatoes in Oil,81,15
 43638,Butter Flavor Movie Theater Microwave Popcorn,23,19
-43639,Fresher Collection‚Ñ¢ Timber‚Ñ¢ with Mint Men's Anti-Perspirant & Deodorant,80,11
+43639,Fresher Collection‚Ñ?Timber‚Ñ?with Mint Men's Anti-Perspirant & Deodorant,80,11
 43640,White Crab Meat,95,15
 43641,Soft Baked Banana Bread,48,14
 43642,Classic Clean Dandruff Shampoo,22,11
@@ -44500,7 +44500,7 @@ product_id,product_name,aisle_id,department_id
 44499,C Vitamin 1000 Mg Tablets,47,11
 44500,Ultra Strong Charmin Ultra Strong Toilet Paper,54,17
 44501,100% Whole Grain Whole Wheat Flour,17,13
-44502,Black Chill‚Ñ¢ Revitalizing Shower,127,11
+44502,Black Chill‚Ñ?Revitalizing Shower,127,11
 44503,Large Strawberries Sliced,116,1
 44504,Raisin Cinnamon Bread,112,3
 44505,Mixed Berry Crunch Protein Oatmeal,130,14
@@ -45539,7 +45539,7 @@ product_id,product_name,aisle_id,department_id
 45538,"Microwave Ready  Bacon, Lower Sodium",106,12
 45539,Gourmet Beef Flavored Broth,33,6
 45540,Almond-Aloe Moisturizer SPF 15,109,11
-45541,The Tonight Dough‚Ñ¢ Ice Cream,37,1
+45541,The Tonight Dough‚Ñ?Ice Cream,37,1
 45542,Wasabi Green Peas,117,19
 45543,Medium Buffalo Wing Sauce,5,13
 45544,Organic Plain Nonfat Greek Yogurt,120,16
@@ -46223,7 +46223,7 @@ product_id,product_name,aisle_id,department_id
 46222,Original Ranch Salad Dressing & Seasoning Mix,89,13
 46223,Medicated Cooling Pads with Witch Hazel,70,11
 46224,Chocolate Frosting,97,13
-46225,Complete Multi-Benefit‚Ñ¢ Whitening + Scope Toothpaste,20,11
+46225,Complete Multi-Benefit‚Ñ?Whitening + Scope Toothpaste,20,11
 46226,Thick & Crispy Tortilla Chips,107,19
 46227,Organic Pita Bread,128,3
 46228,White Cheddar Mac & Cheese & Bacon,38,1
@@ -47235,7 +47235,7 @@ product_id,product_name,aisle_id,department_id
 47234,Cucumber Dish Soap,74,17
 47235,Stovetop Cornbread Stuffing Mix,4,9
 47236,Protein with Dark Chocolate Granola,121,14
-47237,ULTRACLEAN‚Ñ¢ Arctic Mint Mouth Wash,20,11
+47237,ULTRACLEAN‚Ñ?Arctic Mint Mouth Wash,20,11
 47238,Original Recipe Stewed Tomatoes,81,15
 47239,"Cherry, Grape, Lemon, Apple, and Orange Sugar Candy",45,19
 47240,Blueberry Syrup,29,13
@@ -49571,7 +49571,7 @@ product_id,product_name,aisle_id,department_id
 49570,Dairy Free Greek Yogurt Blueberry,120,16
 49571,Chelated Zinc,47,11
 49572,Honey & Lemon Menthol Cough Suppressants,11,11
-49573,That's My Jam‚Ñ¢ Core Ice Cream,37,1
+49573,That's My Jam‚Ñ?Core Ice Cream,37,1
 49574,Candles Birthday Stripes,101,17
 49575,Chocolate Vanilla Malt Custard,100,21
 49576,Vegetable Beef Nutritious Dinner,92,18

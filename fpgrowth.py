@@ -4,27 +4,12 @@ import loaddata
 # import fpgrouth
 
 
-def loadDataSet():
-    """
-    加载数据
-    返回：dataSet
-    """
-    dataSet = [['l1', 'l2', 'l5'], ['l2', 'l4'], ['l2', 'l3'],['l1','l2','l3','l4','l5','l6','l7'],
-        ['l1', 'l2', 'l4'], ['l1', 'l3'], ['l2', 'l3'],
-        ['l1', 'l3'], ['l1', 'l2', 'l3','l4', 'l5'], ['l1', 'l2', 'l3','l4']]
-    return dataSet
-
-
 def transfer2FrozenDataSet(dataSet):
     """
     将初始数据装换为字典
     参数：dataSet
     返回：frozenDataSet
     """
-    # frozenDataSet = {}
-    # for elem in dataSet:
-    #     frozenDataSet[frozenset(elem)] = 1
-    # return frozenDataSet
     frozenDataSet = {}
     global n
     n=0
@@ -85,46 +70,53 @@ def createFPTree(frozenDataSet, minSupport=0.01):
         frequentItemsInRecord = {}
         for item in items:
             if item in frequentItems:
+                #筛选出频繁项集
                 frequentItemsInRecord[item] = headPointTable[item][0]
         if len(frequentItemsInRecord) > 0:
+            #对频繁项集进行排序
             orderedFrequentItems = [v[0] for v in sorted(frequentItemsInRecord.items(), key=lambda v:v[1], reverse = True)]
+            #向树中添加该条数据
             updateFPTree(fptree, orderedFrequentItems, headPointTable, count)
 
     return fptree, headPointTable
 
 def updateFPTree(fptree, orderedFrequentItems, headPointTable, count):
-    #handle the first item
+    
     if orderedFrequentItems[0] in fptree.children:
+        #树中存在该节点，则增高该节点的计数
         fptree.children[orderedFrequentItems[0]].increaseC(count)
     else:
+        #创建一个新节点，将该节点插入树中
         fptree.children[orderedFrequentItems[0]] = TreeNode(orderedFrequentItems[0], count, fptree)
 
-        #update headPointTable
+        #更新项头表
         if headPointTable[orderedFrequentItems[0]][1] == None:
             headPointTable[orderedFrequentItems[0]][1] = fptree.children[orderedFrequentItems[0]]
         else:
             updateHeadPointTable(headPointTable[orderedFrequentItems[0]][1], fptree.children[orderedFrequentItems[0]])
-    #handle other items except the first item
+    
     if(len(orderedFrequentItems) > 1):
         updateFPTree(fptree.children[orderedFrequentItems[0]], orderedFrequentItems[1::], headPointTable, count)
 
 def updateHeadPointTable(headPointBeginNode, targetNode):
+    #更新频繁项集
     while(headPointBeginNode.nextSimilarItem != None):
         headPointBeginNode = headPointBeginNode.nextSimilarItem
     headPointBeginNode.nextSimilarItem = targetNode
-
+#递归查找频繁项集
 def mineFPTree(headPointTable, prefix, frequentPatterns, minSupport=0.01):
-    #for each item in headPointTable, find conditional prefix path, create conditional fptree, then iterate until there is only one element in conditional fptree
+    #将项头表中的元素按支持度升序排序
     headPointItems = [v[0] for v in sorted(headPointTable.items(), key = lambda v:v[1][0])]
     if(len(headPointItems) == 0): return
-
+    #从fp树的底层向根基地点逐层查找
     for headPointItem in headPointItems:
         newPrefix = prefix.copy()
         newPrefix.add(headPointItem)
         support = headPointTable[headPointItem][0]
         frequentPatterns[frozenset(newPrefix)] = support
-
+        #创建条件模式基
         prefixPath = getPrefixPath(headPointTable, headPointItem)
+        #递归
         if(prefixPath != {}):
             conditionalFPtree, conditionalHeadPointTable = createFPTree(prefixPath, minSupport)
             if conditionalHeadPointTable != None:
@@ -164,11 +156,18 @@ def ascendTree(treeNode):
     return prefixs
 
 def rulesGenerator(frequentPatterns, rules, minConf=0.1):
+    """
+    计算关联规则
+    参数：frequentpatterns:频繁项集
+            rules：已生成的规则
+            minConf:最小支持度
+    """
     for frequentset in frequentPatterns:
         if(len(frequentset) > 1):
             getRules(frequentset,frequentset, rules, frequentPatterns, minConf)
 
 def removeStr(set, str):
+
     tempSet = []
     for elem in set:
         if(elem != str):
@@ -192,26 +191,3 @@ def getRules(frequentset,currentset, rules, frequentPatterns, minConf=0.1):
             if(len(subSet) >= 2):
                 getRules(frequentset, subSet, rules, frequentPatterns, minConf)
 
-# if __name__=='__main__':
-#     # print("fptree:")
-#     # dataSet = loadDataSet()
-#     dataSet = loaddata.load_data(0)
-#     frozenDataSet = transfer2FrozenDataSet(dataSet)
-#     # print(frozenDataSet)
-#     minSupport = 0.3
-#     fptree, headPointTable = createFPTree(frozenDataSet, minSupport)
-#     # fptree,headPointTable = fpgrouth.createTree(frozenDataSet,minSupport)
-#     # fptree.disp()
-#     frequentPatterns = {}
-#     prefix = set([])
-#     mineFPTree(headPointTable, prefix, frequentPatterns, minSupport)
-#     # print("频繁项集\n")
-#     # for x in frequentPatterns:
-#     #     print(x,frequentPatterns[x])
-#     minConf = 0.7
-#     rules = []
-#     rulesGenerator(frequentPatterns, minConf, rules)
-#     # print("关联规则\n")
-#     # for x in rules:
-#     #     print(x)
-#     print(len(rules))

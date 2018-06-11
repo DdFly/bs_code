@@ -1,36 +1,74 @@
 #encoding:utf-8
-# import csv
+import csv
 
+
+# product_dict = {}
+# data_set=[]
+# d={}
 # cvs_file = csv.reader(open('order_products__prior.csv','r'))
 #     # print(cvs_file)
+# cvs_file2 = csv.reader(open('products.csv','r'))
+# # for x in cvs_file2:
+# #     print(x)
+# cvs_file3 = open('products_aisle.csv','w',newline='')
+
+# writer = csv.writer(cvs_file3)
+
+# for x in cvs_file2:
+#     d[x[0]]=x[2]
 # for abc in cvs_file:
-# 	print(abc)
+#     if (abc[0]=='order_id'):
+#         continue
+#         # t=find(abc[1])        
+#     if (abc[1] in d):
+#         t=d.get(abc[1])
 
+#     if (abc[0] in product_dict):
+#         if (product_dict[abc[0]].count(t)==0):
+#             product_dict[abc[0]].append(t)
+#     else:
+#         product_dict.setdefault(abc[0],[]).append(t)
+# writer.writerow(['order_id','aisle_id'])
+# for kiy in product_dict:
+#     writer.writerow([kiy,';'.join(product_dict[kiy])])
 
-def loadDataSet():
-    """
-    加载数据
-    返回：dataSet
-    """
-    dataSet = [['l1', 'l2', 'l5'], ['l2', 'l4'], ['l2', 'l3'],['l2'],['l1','l2','l3','l4','l5','l6','l7'],
-        ['l1', 'l2', 'l4'], ['l1', 'l3'], ['l2', 'l3'],
-        ['l1', 'l3'], ['l1', 'l2', 'l3','l4', 'l5'], ['l1', 'l2', 'l3','l4']]
-    return dataSet
+# product_dict = {}
+# data_set=[]
+# cvs_file = csv.reader(open('order_products__prior.csv','r'))
+# cvs_file3 = open('order_products.csv','w',newline='')
+# writer = csv.writer(cvs_file3)
+# # print(cvs_file)
+# for abc in cvs_file:
+#     if abc[0]=='order_id':
+#         continue
+#     if abc[0] in product_dict:
+#         product_dict[abc[0]].append(abc[1])
+#     else:
+#         product_dict.setdefault(abc[0],[]).append(abc[1])
 
+#         # if i>n:
+#         #     break
+# writer.writerow(['order_id','product_id'])
+# for kiy in product_dict:
+#     writer.writerow([kiy,product_dict[kiy]])
 
-def transfer2FrozenDataSet(dataSet):
-    """
-    将初始数据装换为字典
-    参数：dataSet
-    返回：frozenDataSet
-    """
-    frozenDataSet = {}
-    for elem in dataSet:
-    	if(frozenset(elem) in frozenDataSet):
-    		frozenDataSet[frozenset(elem)] +=1
-    	else:
-        	frozenDataSet[frozenset(elem)] = 1
+# product_dict = {}
+# data_set=[]
+# cvs_file = csv.reader(open('order_products__prior.csv','r'))
+# cvs_file3 = open('order_products.csv','w',newline='')
+# writer = csv.writer(cvs_file3)
+# # print(cvs_file)
+# for abc in cvs_file:
+#     if abc[0]=='order_id':
+#         continue
+#     if abc[0] in product_dict:
+#         product_dict[abc[0]].append(abc[1])
+#     else:
+#         product_dict.setdefault(abc[0],[]).append(abc[1])
 
-    return frozenDataSet
+#         # if i>n:
+#         #     break
+# writer.writerow(['order_id','product_id'])
+# for kiy in product_dict:
+#     writer.writerow([kiy,';'.join(product_dict[kiy])])
 
-print(transfer2FrozenDataSet(loadDataSet()))
